@@ -5,7 +5,7 @@ import './styles.css';
 export default function Login() {
     return (
         <div className="login-container">
-            <h1>BEM-VINDO DE VOLTA!</h1>
+            <h1>Olá, que bom te ver de novo!</h1>
             <section className="login-form">
                 <form action="">
                     <h2>Faça seu login:</h2>
