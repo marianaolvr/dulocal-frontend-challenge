@@ -2,32 +2,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
   box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0;
 }
 
 body {
-    font: 400 14px Roboto, sans-serif;
-    background-color: #f5f3f0;
+  background-color: #f5f3f0;
+  font: 400 14px Roboto, sans-serif;
 }
 
-input, button, textarea {
-    font: 400 18px Roboto, sans-serif;
+input,
+button,
+textarea {
+  font: 400 18px Roboto, sans-serif;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+a {
+    font: 400 14px Roboto, sans-serif;
+    color: rgb(190, 85, 85);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(119, 119, 119);
+    font-weight: 700;
 }
 
 
 form input {
-    width: 100%;
-    height: 50px;
-    color: #333;
-    border: 1px solid #dcdce6;
-    border-radius: 8px;
-    padding: 0 24px;
-    margin: 10px 10px;
+  border: 1px solid #dcdce6;
+  border-radius: 8px;
+  color: #333;
+  height: 50px;
+  margin: 10px 10px;
+  padding: 0 26px;
+  width: 100%;
+}
+
+.button {
+  background-color: rgb(190, 85, 85);
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  height: 50px;
+  margin: 10px 10px;
+  width: 100%;
 }
