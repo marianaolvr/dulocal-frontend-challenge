@@ -1,5 +1,5 @@
 ## duLocal frontend challenge
-:seeding: :woman_farmer: :carrot: :broccoli: :woman_cook:
+:seedling: :woman_farmer: :carrot: :broccoli: :woman_cook:
 
 ## Available Scripts
 
