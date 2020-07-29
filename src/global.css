@@ -52,12 +52,12 @@ form input {
   color: #fff;
   font-weight: 700;
   height: 50px;
-  margin: 10px 10px;
+  margin: 8px 8px;
   text-align: center;
   text-decoration: none;
   width: 100%;
 }
 
 .button:hover {
-    filter: brightness(95%);
+    filter: brightness(95%)
 }

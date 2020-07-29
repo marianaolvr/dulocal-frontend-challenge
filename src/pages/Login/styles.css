@@ -1,9 +1,9 @@
-h1 {
+.login-container h1 {
     color:  rgb(190, 85, 85);
     margin-bottom: 24px;
 }
 
-h2 {
+.login-form h2 {
     color: rgb(119, 119, 119);
 }
 

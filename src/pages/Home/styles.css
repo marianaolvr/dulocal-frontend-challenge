@@ -1,0 +1,25 @@
+.index-container h1 {
+    color:  rgb(190, 85, 85);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.index-container h2 {
+    color: rgb(119, 119, 119);
+    text-align: center;
+}
+
+.index-container {
+    height: 100vh;
+    margin: 0 auto;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.index-buttons {
+    padding: 4px;
+}
