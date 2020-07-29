@@ -15,7 +15,8 @@ body {
 
 input,
 button,
-textarea {
+textarea,
+label {
   font: 400 18px Roboto, sans-serif;
 }
 
