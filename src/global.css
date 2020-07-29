@@ -53,5 +53,11 @@ form input {
   font-weight: 700;
   height: 50px;
   margin: 10px 10px;
+  text-align: center;
+  text-decoration: none;
   width: 100%;
+}
+
+.button:hover {
+    filter: brightness(95%);
 }
