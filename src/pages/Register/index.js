@@ -25,9 +25,6 @@ export default function Register() {
 
                 <button type="submit" className="button">Cadastrar</button>
             </form>
-
-
-
         </div>
     )
 };
