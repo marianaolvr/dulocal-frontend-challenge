@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 import api from '../../services/api';
 import './styles.css';
-import axios from 'axios';
 
 export default function Products() {
 
@@ -15,19 +14,35 @@ export default function Products() {
     }, []);
 
     return (
+
+
         <div className="products-container">
+
+            <header>
+                <ul className="navbar">
+                    <li><a href="">CARRINHO</a></li>
+                </ul>
+            </header>
+
             <h1>Confira nossos produtos disponíveis:</h1>
             <div className="product-cards">
-                <ul>
-                    {products.map(product => (
-                        <li key={product.id} className="product">
-                            <img src={product.image} alt="" />
-                            <h3>{product.name}</h3>
-                            <strong>Valor</strong>
-                            <p>{product.price}</p>
-                        </li>
-                    ))}
-                </ul>
+
+                {products.map(product => (
+                    <div key={product.id} className="card">
+                        <img src={product.image} alt="" />
+
+                        <div className="card-content">
+                            <h4>{product.name}</h4>
+                            <p><strong>Valor: </strong>{product.price}</p>
+
+                            <div className="units">
+                                <input type="number" name="" id="" placeholder="Quantidade" />
+                            </div>
+                            <button type="submit" className="btn">COMPRAR</button>
+                        </div>
+                    </div>
+                ))}
+
             </div>
 
 
