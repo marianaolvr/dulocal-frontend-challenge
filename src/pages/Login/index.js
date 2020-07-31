@@ -16,9 +16,10 @@ export default function Login() {
             console.log(data);
 
             history.push('/produtos');
-        }
+        }else {
         alert('Usuário ou senha inválidos. Tente novamente!');
     }
+}
 
     return (
         <div className="login-container">
