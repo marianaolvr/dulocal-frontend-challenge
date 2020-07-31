@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
 import './styles.css';
@@ -7,10 +7,16 @@ import './styles.css';
 
 export default function Register() {
 
+    const history = useHistory();
+
     const { register, handleSubmit, errors } = useForm();
 
     const onSubmit = (data) => {
-        console.log(data)
+        console.log(data);
+
+        alert('Cadastro realizado com sucesso!');
+
+        history.push('/produtos')
     }
 
     return (
@@ -42,7 +48,11 @@ export default function Register() {
                     name="email"
                     id="inputEmail"
                     ref={register({
-                        required: "Informe o seu e-mail"
+                        required: "Coloque o seu e-mail",
+                        pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                            message: "Informe um e-mail válido"
+                    },
                     })}
                 />
                 {errors.email
@@ -93,7 +103,20 @@ export default function Register() {
                     name="cpf"
                     id="inputCpf"
                     ref={register({
-                        required: "Informe seu CPF"
+                        required: "Informe seu CPF",
+                        pattern: {
+                            value: /[0-9]/,
+                            message: "Insira penas números, sem pontos e traços" 
+                        },
+                        maxLength: {
+                            value: 11,
+                            message: "CPF inválido"
+                        },
+
+                        minLength: {
+                            value: 11,
+                            message: "CPF inválido"
+                        },                        
                     })}
                 />
                 {errors.cpf

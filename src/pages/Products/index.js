@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 import './styles.css';
@@ -14,13 +15,13 @@ export default function Products() {
     }, []);
 
     return (
-
-
         <div className="products-container">
 
             <header>
                 <ul className="navbar">
-                    <li><a href="">CARRINHO</a></li>
+                    <li>
+                        <Link to="/carrinho-de-compras">CARRINHO</Link>
+                    </li>
                 </ul>
             </header>
 
