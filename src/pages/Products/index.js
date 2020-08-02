@@ -16,7 +16,6 @@ export default function Products() {
 
     return (
         <div className="products-container">
-
             <header>
                 <ul className="navbar">
                     <li>
@@ -29,17 +28,26 @@ export default function Products() {
             <div className="product-cards">
 
                 {products.map(product => (
-                    <div key={product.id} className="card">
-                        <img src={product.image} alt="" />
+                    <div key={product.id} className="card">                  
+                    
+                    
+                        <img 
+                        src={product.image}
+                    
+                    
+                    
+    value={product.image} alt="" />
 
                         <div className="card-content">
-                            <h4>{product.name}</h4>
-                            <p><strong>Valor: </strong>{product.price}</p>
+                            <h4 
+                            value={product.name}>
+                                {product.name}</h4>
 
-                            <div className="units">
-                                <input type="number" name="" id="" placeholder="Quantidade" />
-                            </div>
-                            <button type="submit" className="btn">COMPRAR</button>
+                            <p
+                            value="product.price"><strong>Valor: </strong>
+                                {product.price}</p>
+
+                            <button type="submit">COMPRAR</button>
                         </div>
                     </div>
                 ))}
@@ -51,3 +59,44 @@ export default function Products() {
         </div>
     );
 };
+
+
+
+
+
+
+{/* <div className="units">
+                                <input 
+                                type="number" 
+                                name=""
+                                placeholder="Quantidade"
+                                // value={addCart}
+                                // onChange={
+
+                                //     function PutCard(quantidade){
+                                //         setAddCart(quantidade.target.value);
+                                //         console.log(quantidade.target.value);
+                                //     }
+                                    
+                                    // ESTA PEGANDO O NUMERO \o/
+
+                                    // function HandlerStock(value){
+                                    // setstockControl(value.target.value);
+                                // }
+                             />
+                            </div> */}
+
+
+
+
+
+    // const [stockControl, setStockControl] = useState([])
+    // function onChange(infosDoEvento) {
+    //     setStock(product.taget.value);
+    // }
+
+
+    // const [addItemCart, setAddItemCart] = useState([]);
+        // function onClick(infosDoEvento){
+        //     console.log(infosDoEvento);
+        // }

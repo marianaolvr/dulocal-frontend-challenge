@@ -14,9 +14,9 @@ export default function Register() {
     const onSubmit = (data) => {
         console.log(data);
 
-        alert('Cadastro realizado com sucesso!');
+        alert('Cadastro realizado com sucesso! Agora é só fazer login ;)');
 
-        history.push('/produtos')
+        history.push('/login')
     }
 
     return (
