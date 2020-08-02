@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.css';
 
-export default function Product() {
+export default function Product( { product }) {
     return (
         <div className="product-cards">
             <div key={product.id} className="card">

@@ -1,13 +1,11 @@
-import { createStore } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 
+import productsReducer from './products';
 import cartReducer from './cart';
 
-function reducer(state = [], action) {
-    return state
-};
-
-export default createStore({
+//Configurestore tem o midware para fazer as chamadas assíncronas
+export default configureStore({
     reducer: {
-        cart: cartReducer
+        products: productsReducer,
     }
 });
