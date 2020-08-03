@@ -14,7 +14,7 @@ export default function ProductList() {
     const products = useSelector((state) => state.products);
     const dispatch = useDispatch();
 
-    useEffect(() => {git
+    useEffect(() => {
         dispatch(getAllProducts());
     },
         [dispatch]
@@ -30,6 +30,7 @@ export default function ProductList() {
             <Header />
             
             <div className="products-container">
+            
             <Link to="/carrinho-de-compras">IR PARA O CARRINHO</Link>
                 <div className="product-cards">
                     {products.map((product, index) =>
