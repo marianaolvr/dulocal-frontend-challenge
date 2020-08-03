@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.css';
 
-export default function Product({ product, addItemCart }) {
+export default function Product({ product, addItemCart, somarValor }) {
     return (
         <div className="card">
             <img src={product.image} alt={product.name} />

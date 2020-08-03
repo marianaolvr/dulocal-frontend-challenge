@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem } from '../../store/cart';
+
 import Header from '../../components/Header';
 
 import { BsArrowBarLeft } from 'react-icons/bs';
+import { FiTrash2 } from 'react-icons/fi';
 
 import cartImage from '../../assets/images/empt-shopping-cart.jpeg';
 import './styles.css';
@@ -16,6 +18,9 @@ export default function Cart() {
     function removeItemCart(id) {
         dispatch(removeItem(id));
     };
+
+
+    
 
     return (
         <div>{cart.length === 0 ? (
@@ -34,7 +39,7 @@ export default function Cart() {
                     <Header />
 
                     <div className="resume">
-                        <h2>VALOR TOTAL:</h2>
+                        <h2>O TOTAL É: </h2>
                         <div className="btns">
                             <button className="btn-resume">
                                 <Link to="/lista-de-produtos">COMPRAR MAIS</Link>
@@ -50,7 +55,7 @@ export default function Cart() {
                                 <h4 className="product-name">{item.name}</h4>
                                 <p><strong>Valor: </strong>{item.price}</p>
                             
-                            <button className="btn-delete" onClick={() => removeItemCart(item.id)}>Excluir produto</button>
+                            <button className="btn-delete" onClick={() => removeItemCart(item.id)}><FiTrash2/></button>
                             </div>
                             </div>)}
                     </div>

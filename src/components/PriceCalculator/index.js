@@ -1,29 +1,25 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { calcTotal } from '../../store/cart';
-import { createSelector } from 'reselect';
+// import { createSelector } from 'reselect';
 
 import './styles.css';
 
 export default function PriceCalculator() {
 
-    // const product = useSelector((state) => state.product);
+    const product = useSelector((state) => state.product);
+    const dispatch = useDispatch();
 
-    const calculeTotal = createSelector(
-        state => state.items,
-        items => {
-            console.log("CALCULOU");
-            return items.reduce(
-                (subtotal, item) => subtotal + item.price, 0
-            )
-        }
-    );
+    function calculeTotal(price) {
+        dispatch(calcTotal(price));
 
-    return (
-        <div>
-            <div className="total">
-               <p>O total é: {calculeTotal}</p> 
-            </div>
-        </div>);
 
+        return (
+            <div>
+                <div className="total">{product.map((item) =>
+                    <p>O VALOR TOTAL É: {() => calculeTotal(item.price)}</p>
+                )}
+                </div>
+            </div>)
+    }
 }

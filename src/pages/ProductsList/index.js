@@ -37,7 +37,8 @@ export default function ProductList() {
                         <Product
                             key={index}
                             product={product}
-                            addItemCart={addItemCart} />)}
+                            addItemCart={addItemCart}
+                             />)}
                 </div>
             </div>
         </div>

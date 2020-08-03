@@ -12,5 +12,5 @@ export default createReducer(INICIAL_STATE, {
     [removeItem.type]: (state, action) => state
     .filter(item => item.id !== action.payload),
 
-    [calcTotal.type]: state => state.items.reduce((subtotal, item) => subtotal + item.price, 0),
+    [calcTotal.type]: state => state.reduce((subtotal, item) => subtotal + item.price),
 });
