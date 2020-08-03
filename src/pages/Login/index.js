@@ -15,7 +15,7 @@ export default function Login() {
             
             console.log(data);
 
-            history.push('/produtos');
+            history.push('/lista-de-produtos');
         }else {
         alert('Usuário ou senha inválidos. Tente novamente!');
     }

@@ -29,18 +29,31 @@ export default function Cart() {
                 </div>
             </div>)
             : (<React.Fragment>
-                <Header />
-                <div className="container">
-                    <div className="product-cards">{cart.map((item) =>
+
+                <div className="container-cart">
+                    <Header />
+
+                    <div className="resume">
+                        <h2>VALOR TOTAL:</h2>
+                        <div className="btns">
+                            <button className="btn-resume">
+                                <Link to="/lista-de-produtos">COMPRAR MAIS</Link>
+                            </button>
+                            <button className="btn-resume">
+                                <Link to="/compra-concluida">FINALIZAR</Link></button>
+                        </div>
+                    </div>
+                    <div className="product-cards-cart">{cart.map((item) =>
                         <div className="card">
                             <img src={item.image} alt={item.name} />
                             <div className="card-content">
                                 <h4 className="product-name">{item.name}</h4>
                                 <p><strong>Valor: </strong>{item.price}</p>
                             </div>
-                            <button className="btn" onClick={() => removeItemCart(item.id)}>Excluir produto</button>
+                            <button onClick={() => removeItemCart(item.id)}>Excluir produto</button>
                         </div>)}
                     </div>
+
                 </div>
             </React.Fragment>)}</div>);
 };
