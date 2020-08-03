@@ -44,14 +44,15 @@ export default function Cart() {
                         </div>
                     </div>
                     <div className="product-cards-cart">{cart.map((item) =>
-                        <div className="card">
+                        <div className="card-cart">
                             <img src={item.image} alt={item.name} />
-                            <div className="card-content">
+                            <div className="card-content-cart">
                                 <h4 className="product-name">{item.name}</h4>
                                 <p><strong>Valor: </strong>{item.price}</p>
+                            
+                            <button className="btn-delete" onClick={() => removeItemCart(item.id)}>Excluir produto</button>
                             </div>
-                            <button onClick={() => removeItemCart(item.id)}>Excluir produto</button>
-                        </div>)}
+                            </div>)}
                     </div>
 
                 </div>
