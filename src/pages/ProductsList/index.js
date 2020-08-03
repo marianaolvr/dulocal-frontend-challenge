@@ -27,14 +27,14 @@ export default function ProductList() {
         <div>
             <Header />
             <div className="products-container">
-           <div className="product-cards">
-                {products.map((product, index) =>
-                    <Product
-                        key={index}
-                        product={product}
-                        addItemCart={addItemCart} />)}
-        </div>
-        </div>
+                <div className="product-cards">
+                    {products.map((product, index) =>
+                        <Product
+                            key={index}
+                            product={product}
+                            addItemCart={addItemCart} />)}
+                </div>
+            </div>
         </div>
     )
 
