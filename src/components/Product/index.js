@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import './styles.css';
 
 export default function Product({ product, addItemCart }) {
@@ -13,9 +11,8 @@ export default function Product({ product, addItemCart }) {
                     <h4 className="product-name">{product.name}</h4>
                     <p><strong>Valor: </strong>
                         {product.price}</p>
-                    <button
-                        onClick={() => addItemCart(product)}>
-                        COMPRAR</button>
+                    <button 
+                    onClick={() => addItemCart(product)}>COMPRAR</button>
                 </div>
             </div>
         </div>
