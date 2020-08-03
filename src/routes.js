@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import ProductsList from './pages/ProductsList';
-import Products from './pages/Products';
 import Cart from './pages/Cart';
 
 export default function Routes() {
@@ -18,7 +17,6 @@ export default function Routes() {
                 <Route path="/login" component={Login} />
                 <Route path="/cadastro" component={Register} />
                 <Route path="/lista-de-produtos" component={ProductsList} />
-                <Route path="/produtos" component={Products} />
                 <Route path="/carrinho-de-compras" component={Cart} />
            
             </Switch>
