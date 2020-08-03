@@ -3,7 +3,7 @@ import React from 'react';
 
 import './styles.css';
 
-export default function Product({ product }) {
+export default function Product({ product, addItemCart }) {
     return (
         <div className="product-cards">
             <div className="card">
@@ -13,7 +13,9 @@ export default function Product({ product }) {
                     <h4 className="product-name">{product.name}</h4>
                     <p><strong>Valor: </strong>
                         {product.price}</p>
-                    <button>COMPRAR</button>
+                    <button
+                        onClick={() => addItemCart(product)}>
+                        COMPRAR</button>
                 </div>
             </div>
         </div>
