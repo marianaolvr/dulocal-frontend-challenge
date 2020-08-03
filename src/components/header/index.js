@@ -1,9 +1,13 @@
-import react from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom'; 
+import { useSelector } from 'react-redux';
 
 import './styles.css';
 
 export default function Header() {
+
+    const length = useSelector(state => state.cart.length);
+
     return (
     <header>
         <ul className="navbar">
@@ -12,7 +16,7 @@ export default function Header() {
 
         <ul>
             <Link to="/carrinho-de-compras">
-                <span>Quantidade</span>
+                <p>Quantidade</p><span>{length}</span>
             </Link>
         </ul>
     </header>

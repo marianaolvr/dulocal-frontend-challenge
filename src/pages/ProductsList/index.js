@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Product from '../../components/Product';
+import Header from '../../components/Header';
 
 import { getAllProducts } from '../../store/fetchActions';
 import { addItem } from '../../store/cart'
@@ -10,26 +11,28 @@ export default function ProductList() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-            dispatch(getAllProducts());
-        },
-        [ dispatch ]
-        );
+        dispatch(getAllProducts());
+    },
+        [dispatch]
+    );
 
 
     function addItemCart(product) {
         dispatch(addItem(product));
     }
 
-        return(
+    return (
+        <div>
+            <Header />
             <div>
-                <div>
-                    {products.map((product, index) =>
-                    <Product 
-                    key={index} 
-                    product={product}
-                    addItemCart={addItemCart} />)}
-                </div>
+                {products.map((product, index) =>
+                    <Product
+                        key={index}
+                        product={product}
+                        addItemCart={addItemCart} />)}
             </div>
-        )
+        </div>
+
+    )
 
 }
