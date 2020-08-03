@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './styles.css';
 
 export default function Product({ product, addItemCart }) {
@@ -13,6 +14,8 @@ export default function Product({ product, addItemCart }) {
                 <button
                     onClick={() => addItemCart(product)}>COMPRAR</button>
             </div>
+
+
         </div>
     )
 }

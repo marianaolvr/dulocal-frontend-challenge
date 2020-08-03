@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Product from '../../components/Product';
 import Header from '../../components/Header';
+
 
 import { getAllProducts } from '../../store/fetchActions';
 import { addItem } from '../../store/cart'
@@ -26,7 +28,10 @@ export default function ProductList() {
     return (
         <div>
             <Header />
+            
             <div className="products-container">
+            
+            <Link to="/carrinho-de-compras">IR PARA O CARRINHO</Link>
                 <div className="product-cards">
                     {products.map((product, index) =>
                         <Product
