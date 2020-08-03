@@ -1,12 +1,11 @@
 import { createAction, createReducer } from '@reduxjs/toolkit';
 
 
-const INICIAL_STATE = [//API 
-]
+const INICIAL_STATE = []
 
 //action
-export const addProduct = createAction('ADD_PRODUCT'); 
+export const addProducts = createAction('ADD_PRODUCTS'); 
   
 export default createReducer (INICIAL_STATE, {
-    [addProduct.type]: (state, action) => [ ...state, action.payload]
+    [addProducts.type]: (state, action) => [ ...action.payload]
 });
