@@ -6,6 +6,8 @@ import Header from '../../components/Header';
 import { getAllProducts } from '../../store/fetchActions';
 import { addItem } from '../../store/cart'
 
+import './styles.css';
+
 export default function ProductList() {
     const products = useSelector((state) => state.products);
     const dispatch = useDispatch();
@@ -24,15 +26,16 @@ export default function ProductList() {
     return (
         <div>
             <Header />
-            <div>
+            <div className="products-container">
+           <div className="product-cards">
                 {products.map((product, index) =>
                     <Product
                         key={index}
                         product={product}
                         addItemCart={addItemCart} />)}
-            </div>
         </div>
-
+        </div>
+        </div>
     )
 
 }

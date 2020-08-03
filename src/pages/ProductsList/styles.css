@@ -1,0 +1,15 @@
+
+.products-container {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 30px;
+    margin: 32px auto;
+}
+
+.product-cards {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    margin-top: 30px;
+}
+
