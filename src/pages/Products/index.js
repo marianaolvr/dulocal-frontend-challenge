@@ -16,12 +16,6 @@ export default function Products() {
 
     return (
         <div className="products-container">
-            <header>
-                <ul className="navbar">
-                    <li><Link to="/carrinho-de-compras">CARRINHO</Link></li>
-                </ul>
-            </header>
-
             <h1>Confira nossos produtos disponíveis:</h1>
             <div className="product-cards">
                 {products.map(product => (
