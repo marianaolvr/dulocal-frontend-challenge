@@ -19,9 +19,6 @@ export default function Cart() {
         dispatch(removeItem(id));
     };
 
-
-    
-
     return (
         <div>{cart.length === 0 ? (
             <div className="emptCart">
